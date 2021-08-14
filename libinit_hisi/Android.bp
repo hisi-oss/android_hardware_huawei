@@ -1,0 +1,21 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit_hisi",
+    srcs: [
+        "libinit_utils.cpp",
+    ],
+    export_include_dirs: ["include"],
+    recovery_available: true,
+}
+
+cc_library_static {
+    name: "init_hisi",
+    srcs: ["init_hisi.cpp"],
+    whole_static_libs: ["libinit_hisi"],
+    include_dirs: ["system/core/init"],
+    recovery_available: true,
+}
