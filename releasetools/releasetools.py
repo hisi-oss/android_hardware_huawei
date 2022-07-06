@@ -25,10 +25,11 @@ def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
 
-def AddImage(info, dir, basename, dest):
+def AddImage(info, dir, basename, dest, printInfo=True):
   data = info.input_zip.read(dir + "/" + basename)
   common.ZipWriteStr(info.output_zip, basename, data)
-  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
+  if printInfo:
+    info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def ImageExists(info, dir, basename):
@@ -37,6 +38,11 @@ def ImageExists(info, dir, basename):
     return True
   except KeyError:
     return False
+
+def FullOTA_InstallBegin(info):
+  if ImageExists(info, "IMAGES", "super_empty.img"):
+    AddImage(info, "IMAGES", "super_empty.img", "/tmp/super_empty.img", False)
+    info.script.AppendExtra('huawei.retrofit_dynamic_partitions();')
 
 def OTA_InstallEnd(info):
   if ImageExists(info, "RADIO", "boot_ramdisk.img"):
