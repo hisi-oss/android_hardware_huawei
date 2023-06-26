@@ -5,4 +5,8 @@
 
 #include "vendor_init.h"
 
-void vendor_load_properties() {}
+#include <libinit_variants.h>
+
+void vendor_load_properties() {
+    load_variants();
+}

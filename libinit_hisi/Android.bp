@@ -7,7 +7,9 @@ cc_library_static {
     name: "libinit_hisi",
     srcs: [
         "libinit_utils.cpp",
+        "libinit_variants.cpp",
     ],
+    whole_static_libs: ["libbase"],
     export_include_dirs: ["include"],
     recovery_available: true,
 }
