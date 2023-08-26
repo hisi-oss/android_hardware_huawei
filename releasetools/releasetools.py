@@ -32,6 +32,6 @@ def AddImage(info, dir, basename, dest):
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def OTA_InstallEnd(info):
-  AddImage(info, "RADIO", "boot_ramdisk.img", "/dev/block/platform/hi_mci.0/by-name/ramdisk")
-  AddImage(info, "RADIO", "recovery_vendor.img", "/dev/block/platform/hi_mci.0/by-name/recovery_vendor")
+  AddImage(info, "RADIO", "boot_ramdisk.img", "/dev/block/by-name/ramdisk")
+  AddImage(info, "RADIO", "recovery_vendor.img", "/dev/block/by-name/recovery_vendor")
   return
