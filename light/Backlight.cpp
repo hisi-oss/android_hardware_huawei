@@ -54,6 +54,7 @@ static const std::string kBacklightDevices[] = {
 
 static const std::string kLedDevices[] = {
         "lcd-backlight",
+        "lcd_backlight0",
 };
 
 BacklightDevice* getBacklightDevice() {
