@@ -31,7 +31,15 @@ def AddImage(info, dir, basename, dest):
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
+def ImageExists(info, dir, basename):
+  try:
+    info.input_zip.getinfo(dir + "/" + basename)
+    return True
+  except KeyError:
+    return False
+
 def OTA_InstallEnd(info):
-  AddImage(info, "RADIO", "boot_ramdisk.img", "/dev/block/by-name/ramdisk")
+  if ImageExists(info, "RADIO", "boot_ramdisk.img"):
+    AddImage(info, "RADIO", "boot_ramdisk.img", "/dev/block/by-name/ramdisk")
   AddImage(info, "RADIO", "recovery_vendor.img", "/dev/block/by-name/recovery_vendor")
   return
