@@ -1,0 +1,37 @@
+//
+// SPDX-FileCopyrightText: The Android Open Source Project
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_defaults {
+    name: "android.hardware.health-service.huawei-defaults",
+    defaults: [
+        "libhealth_aidl_impl_user",
+        "libhealth_aidl_charger_defaults",
+    ],
+    relative_install_path: "hw",
+    vintf_fragments: ["android.hardware.health-service.huawei.xml"],
+    srcs: [
+        "Health.cpp",
+    ],
+    static_libs: [
+        "libhealth_aidl_impl",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.health-service.huawei",
+    defaults: ["android.hardware.health-service.huawei-defaults"],
+    vendor: true,
+    init_rc: ["android.hardware.health-service.huawei.rc"],
+    overrides: ["charger"],
+}
+
+cc_binary {
+    name: "android.hardware.health-service.huawei-recovery",
+    defaults: ["android.hardware.health-service.huawei-defaults"],
+    recovery: true,
+    init_rc: ["android.hardware.health-service.huawei-recovery.rc"],
+    overrides: ["charger.recovery"],
+}
