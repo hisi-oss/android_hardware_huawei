@@ -15,11 +15,6 @@ namespace android {
 namespace hardware {
 namespace light {
 
-static const std::string kAllButtonsPaths[] = {
-        "/sys/class/leds/button-backlight/brightness",
-        "/sys/class/leds/button-backlight1/brightness",
-};
-
 enum led_type {
     RED,
     GREEN,
@@ -44,13 +39,10 @@ Lights::Lights() {
         mLights.push_back(AutoHwLight(LightType::BACKLIGHT));
     }
 
-    for (auto& buttons : kAllButtonsPaths) {
-        if (!fileWriteable(buttons)) continue;
-
-        mButtonsPaths.push_back(buttons);
+    mButtonDevice = getButtonDevice();
+    if (mButtonDevice) {
+        mLights.push_back(AutoHwLight(LightType::BUTTONS));
     }
-
-    if (!mButtonsPaths.empty()) mLights.push_back(AutoHwLight(LightType::BUTTONS));
 
     mWhiteLED = kLEDs[WHITE].exists();
 
@@ -68,7 +60,7 @@ ndk::ScopedAStatus Lights::setLightState(int32_t id, const HwLightState& state) 
             if (mBacklightDevice) mBacklightDevice->setBacklight(color.toBrightness());
             break;
         case LightType::BUTTONS:
-            for (auto& buttons : mButtonsPaths) writeToFile(buttons, color.isLit());
+            if (mButtonDevice) mButtonDevice->setButton(color.isLit());
             break;
         case LightType::BATTERY:
         case LightType::NOTIFICATIONS:

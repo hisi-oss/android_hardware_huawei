@@ -11,6 +11,7 @@ cc_binary {
     vintf_fragments: ["android.hardware.light-service.huawei.xml"],
     srcs: [
         "Backlight.cpp",
+        "Buttons.cpp",
         "Lights.cpp",
         "LED.cpp",
         "Utils.cpp",

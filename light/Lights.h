@@ -9,6 +9,7 @@
 #include <aidl/android/hardware/light/BnLights.h>
 #include <mutex>
 #include "Backlight.h"
+#include "Button.h"
 
 using ::aidl::android::hardware::light::HwLight;
 using ::aidl::android::hardware::light::HwLightState;
@@ -31,7 +32,7 @@ class Lights : public BnLights {
     std::vector<HwLight> mLights;
 
     BacklightDevice* mBacklightDevice;
-    std::vector<std::string> mButtonsPaths;
+    ButtonDevice* mButtonDevice;
     bool mWhiteLED;
 
     std::mutex mLEDMutex;
