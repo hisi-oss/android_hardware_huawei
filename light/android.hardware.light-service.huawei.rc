@@ -37,6 +37,9 @@ on early-boot
     chown system system /sys/class/leds/button-backlight/brightness
     chown system system /sys/class/leds/button-backlight1/brightness
 
+    chown system system /sys/class/leds/keyboard-backlight/brightness
+    chown system system /sys/class/leds/keyboard-backlight-ap/brightness
+
 service vendor.light-default /vendor/bin/hw/android.hardware.light-service.huawei
     class hal
     user system

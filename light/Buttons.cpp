@@ -52,8 +52,21 @@ static const std::string kButtonDevices[] = {
         "button-backlight1",
 };
 
+static const std::string kKeyboardDevices[] = {
+        "keyboard-backlight",
+        "keyboard-backlight-ap",
+};
+
 ButtonDevice* getButtonDevice() {
     for (auto& device : kButtonDevices) {
+        auto Button = new ButtonBrightness(device);
+        if (Button->exists()) {
+            return Button;
+        }
+        delete Button;
+    }
+
+    for (auto& device : kKeyboardDevices) {
         auto Button = new ButtonBrightness(device);
         if (Button->exists()) {
             return Button;
