@@ -1,0 +1,26 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+}
+
+cc_library_shared {
+    name: "libbt-vendor",
+    owner: "huawei",
+    vendor: true,
+
+    srcs: [
+        "libbt-vendor.cpp",
+    ],
+
+    include_dirs: [
+        "packages/modules/Bluetooth/system/hci/include",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "liblog",
+    ],
+}
