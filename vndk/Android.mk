@@ -53,10 +53,36 @@ LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libmedia_helper-v28
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_arm := ../../hardware/huawei/vndk/v28/arm/libmedia_helper.so
+LOCAL_SRC_FILES_arm64 := ../../hardware/huawei/vndk/v28/arm64/libmedia_helper.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TARGET_ARCH := arm arm64
+LOCAL_MODULE_TAGS := optional
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libui-v28
 LOCAL_MULTILIB := both
 LOCAL_SRC_FILES_arm := ../../hardware/huawei/vndk/v28/arm/libui.so
 LOCAL_SRC_FILES_arm64 := ../../hardware/huawei/vndk/v28/arm64/libui.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TARGET_ARCH := arm arm64
+LOCAL_MODULE_TAGS := optional
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libxml2-v28
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_arm := ../../hardware/huawei/vndk/v28/arm/libxml2.so
+LOCAL_SRC_FILES_arm64 := ../../hardware/huawei/vndk/v28/arm64/libxml2.so
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TARGET_ARCH := arm arm64
