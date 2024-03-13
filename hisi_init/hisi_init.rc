@@ -1,3 +1,16 @@
+on post-fs-data
+    # Create the directories used by the Bluetooth subsystem
+    mkdir /data/vendor/bluedroid 0771 bluetooth bluetooth
+
+on property:sys.conn_macs.ready=1
+    # Bluetooth
+    chown bluetooth bluetooth /data/vendor/bluedroid/macbt
+    chmod 0664 /data/vendor/bluedroid/macbt
+
+    # Wi-Fi
+    chown wifi wifi /data/vendor/wifi/macwlan
+    chmod 0664 /data/vendor/wifi/macwlan
+
 service vendor.hisi_init /vendor/bin/hisi_init
     class main
     user root

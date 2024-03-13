@@ -7,7 +7,11 @@ cc_binary {
     name: "hisi_init",
     init_rc: ["hisi_init.rc"],
     srcs: [
+        "hisi_utils.cpp",
+        "hisi_connectivity.cpp",
+        "hisi_dalvik.cpp",
         "hisi_init.cpp",
+        "hisi_nve.cpp"
     ],
     shared_libs: ["libbase"],
     vendor: true,
