@@ -1,0 +1,35 @@
+cc_library_shared {
+    name: "libchrlog",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "chrlog.c",
+    ],
+    shared_libs: [
+        "liblog",
+    ],
+}
+
+cc_library_shared {
+    name: "libhwlog",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "hwlog.c",
+    ],
+    shared_libs: [
+        "liblog",
+    ],
+}
+
+cc_library_shared {
+    name: "libxcollie",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "xcollie.c",
+    ],
+    shared_libs: [
+        "liblog",
+    ],
+}
