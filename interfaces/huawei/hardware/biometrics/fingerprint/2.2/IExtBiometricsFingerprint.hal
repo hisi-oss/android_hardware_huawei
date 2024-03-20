@@ -1,0 +1,14 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.fingerprint@2.2;
+
+import android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint;
+import vendor.huawei.hardware.biometrics.fingerprint@2.1::IExtBiometricsFingerprint;
+
+interface IExtBiometricsFingerprint extends vendor.huawei.hardware.biometrics.fingerprint@2.1::IExtBiometricsFingerprint {
+    sendDataToHal(uint32_t data_type, vec<uint8_t> data) generates (int32_t result);
+};

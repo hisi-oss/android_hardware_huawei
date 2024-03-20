@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.hwfacerecognize@1.3;
+
+import vendor.huawei.hardware.biometrics.hwfacerecognize@1.2::IBiometricsFaceRecognizeClientCallback;
+
+interface IBiometricsFaceRecognizeClientCallback extends vendor.huawei.hardware.biometrics.hwfacerecognize@1.2::IBiometricsFaceRecognizeClientCallback {
+    // Empty
+};

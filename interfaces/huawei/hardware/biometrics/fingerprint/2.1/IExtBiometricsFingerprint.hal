@@ -1,0 +1,34 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.fingerprint@2.1;
+
+import android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint;
+import vendor.huawei.hardware.biometrics.fingerprint@2.1::IFidoAuthenticationCallback;
+
+interface IExtBiometricsFingerprint extends android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint {
+    checkNeedCalibrateFingerPrint() generates (int32_t sensor_calibration_status);
+
+    checkNeedReEnrollFinger() generates (int32_t checkNeedEnroll);
+
+    getFpOldData() generates (vec<int32_t> fingerId);
+
+    getTokenLen() generates (int32_t tokenLen);
+
+    removeUserData(uint32_t gid, string storePath) generates (int32_t debugErrno);
+
+    sendCmdToHal(uint32_t cmdId) generates (int32_t result);
+
+    setCalibrateMode(uint32_t do_sensor_calibration) generates (int32_t setModeStatus);
+
+    setKidsFingerprint(uint32_t fingerId) generates (int32_t result);
+
+    setLivenessSwitch(uint32_t needLivenessAuthentication) generates (int32_t debugErrno);
+
+    updateSecurityId(uint64_t security_id) generates (int32_t debugErrno);
+
+    verifyUser(IFidoAuthenticationCallback fidoClientCallback, uint32_t groupId, string aaid, vec<uint8_t> nonce) generates (int32_t debugErrno);
+};

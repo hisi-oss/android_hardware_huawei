@@ -1,0 +1,25 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.hwfacerecognize@1.0;
+
+interface IBiometricsFaceRecognizeClientCallback {
+    oneway onAuthenticationAcquired(uint32_t acquiredInfo);
+
+    oneway onAuthenticationResult(uint32_t userId, uint32_t errorCode);
+
+    oneway onCancel(uint32_t cancelType);
+
+    oneway onEnrollAcquired(uint32_t acquiredInfo, uint32_t process);
+
+    oneway onEnrollResult(uint32_t faceId, uint32_t userId, uint32_t errorCode);
+
+    oneway onInitResult(uint32_t errorCode);
+
+    oneway onReleaseResult(uint32_t errorCode);
+
+    oneway onRemovedResult(uint32_t userId, uint32_t errorCode);
+};

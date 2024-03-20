@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.hwfacerecognize@1.3;
+
+interface IBiometricsFaceRecognizeDataCallback {
+    sendBigData(uint32_t dataType, uint32_t dataSize, NativeHandle memHdl, vec<uint8_t> extra) generates (int32_t result);
+
+    sendData(uint32_t dataType, vec<uint8_t> data, vec<uint8_t> extra) generates (int32_t result);
+};

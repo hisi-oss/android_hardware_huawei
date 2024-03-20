@@ -1,0 +1,41 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.hwfacerecognize@1.0;
+
+import vendor.huawei.hardware.biometrics.hwfacerecognize@1.0::IBiometricsFaceRecognizeClientCallback;
+
+interface IBiometricsFaceRecognize {
+    authenticate(uint64_t operationId, uint32_t gid) generates (int32_t debugErrno);
+
+    cancelAuthenticate() generates (int32_t debugErrno);
+
+    cancelEnroll() generates (int32_t debugErrno);
+
+    cancelInit() generates (int32_t result);
+
+    cancelRelease() generates (int32_t result);
+
+    cancelRemove() generates (int32_t debugErrno);
+
+    enroll(uint8_t hat, uint32_t gid) generates (int32_t debugErrno)
+
+    init(string packageName) generates (int32_t result);
+
+    postEnroll() generates (int32_t debugErrno);
+
+    preEnroll() generates (int64_t authChallenge);
+
+    release(string packageName) generates (int32_t result);
+
+    remove(int gid, int fid) generates (int32_t debugErrno);
+
+    sendImageData(string data) generates (int32_t debugErrno);
+
+    setActiveGroup(int gid) generates (vec<int32_t> faceId);
+
+    setNotify(IBiometricsFaceRecognizeClientCallback clientCallback) generates (int64_t deviceId);
+};

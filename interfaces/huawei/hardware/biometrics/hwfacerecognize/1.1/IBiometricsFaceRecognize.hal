@@ -1,0 +1,23 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.hwfacerecognize@1.1;
+
+import vendor.huawei.hardware.biometrics.hwfacerecognize@1.0::IBiometricsFaceRecognize;
+
+interface IBiometricsFaceRecognize extends vendor.huawei.hardware.biometrics.hwfacerecognize@1.0::IBiometricsFaceRecognize {
+    getAngleDim() generates (int32_t result);
+
+    getUvt() generates (int32_t result, int32_t faceid, vec<int8_t> uvt, vec<int8_t> reserve);
+
+    prepare(vec<uint8_t> aaid, vec<uint8_t> nonce, vec<uint8_t> extra) generates (int32_t result);
+
+    sendCommand(uint32_t cmd, vec<uint8_t> param) generates (int32_t result);
+
+    setFlag(uint32_t flag) generates (int32_t result);
+
+    setSecureFaceMode(uint32_t mode) generates (int32_t result);
+};

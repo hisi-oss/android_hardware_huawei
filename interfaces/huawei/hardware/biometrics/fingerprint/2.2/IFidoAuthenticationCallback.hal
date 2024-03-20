@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.fingerprint@2.1;
+
+import vendor.huawei.hardware.biometrics.fingerprint@2.1::IFidoAuthenticationCallback;
+
+interface IFidoAuthenticationCallback extends vendor.huawei.hardware.biometrics.fingerprint@2.1::IFidoAuthenticationCallback {
+    // Empty
+};
