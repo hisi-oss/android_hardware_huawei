@@ -1,0 +1,20 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libiawareperf_client",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "IAwarePerfClient.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libbinder_ndk",
+        "android.hardware.power-V2-ndk",
+    ],
+}
