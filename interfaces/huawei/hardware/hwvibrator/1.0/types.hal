@@ -1,0 +1,11 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.hwvibrator@1.0;
+
+enum Type : int32_t {
+    HAPTIC_STOP
+};
