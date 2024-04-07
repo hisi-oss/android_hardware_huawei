@@ -1,0 +1,18 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.hwvibrator@1.1;
+
+import android.hardware.vibrator@1.0::Status;
+import @1.0::IHWVibrator;
+
+interface IHWVibrator extends @1.0::IHWVibrator {
+  oneway setHwVibrator(string type);
+
+  oneway setParameter(string param);
+
+  getParameter(string param) generates (Status status, string param);
+};
