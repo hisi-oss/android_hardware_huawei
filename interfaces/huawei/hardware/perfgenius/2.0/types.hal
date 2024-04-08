@@ -1,0 +1,17 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.perfgenius@2.0;
+
+struct OperationInfo {
+    uint32_t operationId;
+    vec<uint32_t> parameters;
+};
+
+struct PerfRequestInfo {
+    uint32_t id;
+    vec<OperationInfo> operations;
+};
