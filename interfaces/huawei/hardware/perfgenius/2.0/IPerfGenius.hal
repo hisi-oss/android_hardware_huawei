@@ -1,0 +1,19 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.perfgenius@2.0;
+
+interface IPerfGenius {
+    oneway perfEvent(uint32_t cmdId, string pkgName, vec<uint32_t> payload);
+
+    perfRelease(uint32_t perfHandle) generates (uint32_t ret);
+
+    perfRequest(uint32_t durationMs, vec<PerfRequestInfo> requests) generates(int16_t r1, uint32_t r2);
+
+    perfSetMode(uint32_t workModeId) generates (int16_t r1, uint32_t r2);
+
+    perfSetScenario(uint32_t scenarioId) generates (int16_t r1, uint32_t r2);
+};
