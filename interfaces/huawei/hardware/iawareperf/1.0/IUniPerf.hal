@@ -1,0 +1,15 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.iawareperf@1.0;
+
+interface IUniPerf {
+    oneway uniPerfEvent(int32_t cmdId, string pkgName, vec<int32_t> payload);
+
+    uniPerfGetConfig(vec<int32_t> tags) generates (int32_t ret, vec<int32_t> values);
+
+    oneway uniPerfSetConfig(int32_t clientId, vec<int32_t> tags, vec<int32_t> values);
+};
