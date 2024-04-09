@@ -1,0 +1,35 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.hwfactoryinterface@1.1;
+
+import @1.0::IHwFactoryInterface;
+
+interface IHwFactoryInterface extends @1.0::IHwFactoryInterface {
+    oeminfo_Read_reused(int32_t mainIdx, int32_t subIdx, int32_t size) generates (int32_t ret, string out);
+
+    oeminfo_write_reused(int32_t mainIdx, int32_t subIdx, int32_t size, string data) generates (int32_t ret);
+
+    oeminfo_erase_reused(int32_t mainIdx, int32_t subIdx) generates (int32_t ret);
+
+    oeminfo_Read(int32_t idx, int32_t size) generates (int32_t ret, string out);
+
+    oeminfo_write(int32_t idx, int32_t size, string data) generates (int32_t ret);
+
+    oeminfo_erase(int32_t idx) generates (int32_t ret);
+
+    oeminfo_getinfo(int32_t idx) generates (int32_t ret, int32_t totalBlock, int32_t totalByte);
+
+    nv_common_write(int32_t idx, string name, int32_t len, string data) generates (int32_t ret);
+
+    nv_common_read(int32_t idx, string name, int32_t len) generates (int32_t ret, string out);
+
+    getControlFlag(int32_t id, int32_t len) generates (int32_t ret, string buf);
+
+    setControlFlag(int32_t id, string flag, int32_t len) generates (int32_t ret);
+
+    getManufactureMode() generates (int32_t mode);
+};

@@ -1,0 +1,40 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.hwfactoryinterface@1.0;
+
+struct FmdCmdData {
+    string bsn;
+    int32_t commandId;
+    int32_t cycle;
+    int32_t operation;
+    string station;
+    int32_t version;
+};
+
+struct FmdEvent {
+    string bsn;
+    int32_t cycle;
+    string description;
+    string deviceName;
+    int32_t errorCode;
+    string firmware;
+    int32_t itemId;
+    string maxThreshold;
+    string minThreshold;
+    string result;
+    string station;
+    string testName;
+    string time;
+    string value;
+};
+
+struct FmdMsg {
+    int32_t version;
+    int32_t dataSource;
+    int32_t numEvents;
+    vec<FmdEvent> events;
+};
