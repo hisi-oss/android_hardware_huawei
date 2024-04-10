@@ -42,6 +42,7 @@ BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
 BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevice(nullptr) {
     sInstance = this; // keep track of the most recent instance
+    mHuaweiExtBiometricsFingerprint = IHuaweiExtBiometricsFingerprint::getService();
     mDevice = openHal();
     if (!mDevice) {
         ALOGE("Can't open HAL module");

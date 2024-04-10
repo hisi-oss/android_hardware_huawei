@@ -25,6 +25,12 @@
 #include <hidl/Status.h>
 #include <android/hardware/biometrics/fingerprint/2.1/IBiometricsFingerprint.h>
 
+#include <vendor/huawei/hardware/biometrics/fingerprint/2.1/IExtBiometricsFingerprint.h>
+
+using IHuaweiExtBiometricsFingerprint =
+        vendor::huawei::hardware::biometrics::fingerprint::V2_1::IExtBiometricsFingerprint;
+using ::vendor::huawei::hardware::biometrics::fingerprint::V2_1::IFidoAuthenticationCallback;
+
 namespace android {
 namespace hardware {
 namespace biometrics {
@@ -70,6 +76,7 @@ private:
     static BiometricsFingerprint* sInstance;
 
     std::mutex mClientCallbackMutex;
+    sp<IHuaweiExtBiometricsFingerprint> mHuaweiExtBiometricsFingerprint;
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
     fingerprint_device_t *mDevice;
 };
