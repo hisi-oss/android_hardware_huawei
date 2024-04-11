@@ -1,0 +1,42 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.libteec@2.0;
+
+import ILibteecGlobalNotify;
+
+interface ILibteecGlobal {
+    initializeContext(string name, vec<uint8_t> ctx, ILibteecGlobalNotify cb)
+            generates(uint32_t result);
+
+    oneway finalizeContext(vec<uint8_t> ctx);
+
+    openSession(vec<uint8_t> session, handle ctx, string name, vec<uint8_t> challenge,
+                vec<uint8_t> response, uint32_t flags, vec<uint8_t> initVector, vec<uint8_t> salt,
+                memory halOptPtr)
+            generates(int32_t ret, vec<uint8_t> sessionData, vec<uint8_t> token,
+                      vec<uint8_t> additionalInfo, int32_t status);
+
+    oneway closeSession(vec<uint8_t> session, vec<uint8_t> ctx);
+
+    invokeCommand(vec<uint8_t> session, vec<uint8_t> ctx, uint32_t flags, vec<uint8_t> commandData,
+                  memory halOptPtr) generates(int32_t ret, vec<uint8_t> outputData,
+                                              vec<uint8_t> outputBuffer, int32_t status);
+
+    registerSharedMemory(vec<uint8_t> session, vec<uint8_t> descriptor)
+            generates(int32_t ret, vec<uint8_t> sharedMemoryHandle);
+
+    allocateSharedMemory(vec<uint8_t> session, vec<uint8_t> descriptor)
+            generates(int32_t ret, vec<uint8_t> allocatedMemoryHandle, handle memoryHandle);
+
+    oneway releaseSharedMemory(vec<uint8_t> session, vec<uint8_t> descriptor, uint32_t flags);
+
+    ext_TuiSendEvent(vec<uint8_t> session) generates(uint32_t ret);
+
+    insert_AuthInfo(vec<uint8_t> session) generates(uint32_t ret);
+
+    handle_MultiUser_Msg(vec<uint8_t> session) generates(uint32_t ret);
+};
