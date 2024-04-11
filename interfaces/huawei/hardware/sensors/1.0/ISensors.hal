@@ -1,0 +1,47 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.sensors@1.0;
+
+import android.hardware.sensors@1.0::ISensors;
+
+interface ISensors extends android.hardware.sensors@1.0::ISensors {
+    oneway alsActivate(bool enable);
+
+    oneway setSelftest(int32_t testId, int32_t testCmd);
+
+    oneway setCalibrate(int32_t calibrateId, int32_t calibrateCmd);
+
+    oneway colorActivate(bool enable);
+
+    getSensorData(int32_t sensorId) generates (int32_t ret, vec<int32_t> sensorData);
+
+    oneway getAlsLuxValue();
+
+    oneway sensorActivate(int32_t sensorId, bool enable, int64_t flag);
+
+    getCalibrateType(int32_t calibrateId, int32_t calibrateBuf) generates (int32_t ret, string calibrateType);
+
+    oneway getSelftestResult(int32_t testId);
+
+    oneway getCalibrateResult(int32_t calibrateId);
+
+    oneway getSelftestTimeout(int32_t testId);
+
+    oneway setCalibrateExtern(int32_t sensorId, int32_t sensorCmd, vec<uint32_t> targetList);
+
+    oneway getCalibrateTimeout(int32_t calibrateId);
+
+    oneway getPsExternalIrMode();
+
+    oneway setPsExternalIrMode(int32_t psIrMode);
+
+    oneway SupportSensorFeature(int32_t sensorFeature);
+
+    getCalibrateResultExtern(int32_t sensorId) generates (int32_t ret, vec<uint32_t> paraX, vec<uint32_t> paraY, vec<uint32_t> paraZ, vec<uint32_t> paraIr);
+
+    oneway getAlsCalibrateThresholdFromMag();
+};
