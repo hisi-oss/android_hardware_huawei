@@ -1,0 +1,16 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.camera.cfgsvr@1.1;
+
+import @1.0::types;
+
+struct ImageStream {
+    // ToDo: Find out the params names
+    uint64_t metadata1;
+    uint64_t metadata2;
+    handle streamHandle;
+};
