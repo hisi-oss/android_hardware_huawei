@@ -1,0 +1,23 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.camera.camResource@1.0;
+
+interface IHwCameraResourceService {
+    oneway copybit(HwCopybitParam);
+
+    jpegencode(HwJpegEncoderConfig) generates (uint64_t);
+
+    oneway jpegOpenClient(uint32_t, uint32_t);
+
+    oneway jpegCloseClient();
+
+    oneway getCopybitOutUsage(uint64_t);
+
+    oneway getCopybitDefaultOutFormat();
+
+    oneway isCopybitSupportedOutFormat(int32_t);
+}
