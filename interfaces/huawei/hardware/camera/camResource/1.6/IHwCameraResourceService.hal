@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.camera.camResource@1.6;
+
+import @1.5::IHwCameraResourceService;
+
+interface IHwCameraResourceService extends @1.5::IHwCameraResourceService {
+    oneway getDceService();
+};
