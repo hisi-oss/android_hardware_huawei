@@ -1,0 +1,16 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.camera.camResource@1.2;
+
+import @1.0::types;
+
+struct HwOffLineAlgoParam {
+    // HwOffLineAlgoParam struct
+    // plVar4 = *(long **)(struct + 8);
+    char data[8];
+    long* ptr;
+};

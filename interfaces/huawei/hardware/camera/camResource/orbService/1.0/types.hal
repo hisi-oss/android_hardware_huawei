@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.camera.camResource.orbService@1.0;
+
+struct HwORBParam {
+    // undefined4 auStack_90[16];
+    // convertToHal(auStack_90, param_3);
+    char data[16];
+};

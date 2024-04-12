@@ -1,0 +1,19 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.camera.camResource.orbService@1.0;
+
+interface IHwORBService {
+     oneway stop();
+
+     oneway start();
+
+     oneway connect(IHwORBServiceCallback callback);
+
+     process(HwORBParam data) generates (uint32_t result, int32_t error)
+
+     oneway disconnect(IHwORBServiceCallback callback);
+};
