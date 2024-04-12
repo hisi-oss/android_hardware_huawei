@@ -1,0 +1,16 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.camera.cfgsvr@1.1;
+
+import @1.0::types;
+import @1.0::IHwCamCfgSvrListener;
+
+interface IHwCamCfgSvrListener extends @1.0::IHwCamCfgSvrListener {
+    oneway onHwImageStreamCompleted(vec<ImageStream> imageHandle);
+
+    oneway onHwPostProcCompleted_1_1(HwPostProcResult result);
+};
