@@ -4,17 +4,16 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-// Example binder service of the ir HAL.
 package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
 cc_binary {
-    name: "android.hardware.ir-service.example",
+    name: "android.hardware.ir-service.huawei",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.ir-service.example.rc"],
+    init_rc: ["android.hardware.ir-service.huawei.rc"],
     vendor: true,
-    vintf_fragments: ["android.hardware.ir-service.example.xml"],
+    vintf_fragments: ["android.hardware.ir-service.huawei.xml"],
 
     shared_libs: [
         "libbase",
