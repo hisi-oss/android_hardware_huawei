@@ -1,5 +1,6 @@
 //
 // Copyright (C) 2021 The Android Open Source Project
+//               2024 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -19,11 +20,17 @@ cc_binary {
         "libbase",
         "libbinder_ndk",
         "libcutils",
+        "libhardware",
+        "libhidlbase",
         "liblog",
         "libutils",
+        "android.hardware.audio@4.0",
+        "android.hardware.audio@5.0",
         "android.hardware.ir-V1-ndk",
-        "libhardware"
     ],
 
-    srcs: ["main.cpp"],
+    srcs: [
+        "audio.cpp",
+        "main.cpp",
+    ],
 }

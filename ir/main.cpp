@@ -1,8 +1,11 @@
 /*
  * Copyright (C) 2021 The Android Open Source Project
+ *               2024 The LineageOS Project
  *
  * SPDX-License-Identifier: Apache-2.0
  */
+
+#include "audio.h"
 
 #include <aidl/android/hardware/ir/BnConsumerIr.h>
 #include <aidl/android/hardware/ir/ConsumerIrFreqRange.h>
@@ -27,6 +30,7 @@ class ConsumerIr : public BnConsumerIr {
     ::ndk::ScopedAStatus transmit(int32_t in_carrierFreqHz,
                                   const std::vector<int32_t>& in_pattern) override;
     consumerir_device_t *mDevice = nullptr;
+    AudioService mAudioService;
 };
 
 ConsumerIr::ConsumerIr() {
@@ -44,6 +48,12 @@ ConsumerIr::ConsumerIr() {
         // in case it's modified
         mDevice = nullptr;
     }
+
+    // Initialize the audio service
+    mAudioService.initializeAudioService();
+
+    // Initialize mParameter
+    mAudioService.getIrdaSupportParameter();
 }
 
 ::ndk::ScopedAStatus ConsumerIr::getCarrierFreqs(std::vector<ConsumerIrFreqRange>* _aidl_return) {
@@ -71,7 +81,9 @@ ConsumerIr::ConsumerIr() {
 ::ndk::ScopedAStatus ConsumerIr::transmit(int32_t in_carrierFreqHz,
                                           const std::vector<int32_t>& in_pattern) {
     if (in_carrierFreqHz > 0) {
+        mAudioService.setTransmitParameter(true);
         mDevice->transmit(mDevice, in_carrierFreqHz, in_pattern.data(), in_pattern.size());
+        mAudioService.setTransmitParameter(false);
         return ::ndk::ScopedAStatus::ok();
     } else {
         return ::ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
