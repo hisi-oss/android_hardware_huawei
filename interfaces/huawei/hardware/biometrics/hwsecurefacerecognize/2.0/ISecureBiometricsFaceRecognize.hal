@@ -1,0 +1,14 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.huawei.hardware.biometrics.hwsecurefacerecognize@2.0;
+
+import @1.0::ISecureBiometricsFaceRecognize;
+import @1.0::types;
+
+interface ISecureBiometricsFaceRecognize extends @1.0::ISecureBiometricsFaceRecognize {
+    oneway sendCameraImage_V1_1(vec<ImageStream> imageHandle);
+};
