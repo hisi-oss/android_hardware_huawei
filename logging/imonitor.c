@@ -138,3 +138,18 @@ int imonitor_send_event(struct imonitor_eventobj* eventobj) {
     ALOGV("%s: eventobj: %p", __func__, eventobj);
     return 0;
 }
+
+int zrhung_get_config(int wp, char* data, uint32_t maxlen) {
+    ALOGV("%s: wp: %d, data: %p, maxlen: %u", __func__, wp, data, maxlen);
+    return 0;
+}
+
+int zrhung_is_id_valid(short wp_id) {
+    ALOGV("%s: wp_id: %d", __func__, wp_id);
+    return 0;
+}
+
+int zrhung_send_event(int id, const char* cmd_buf, const char* msg_buf) {
+    ALOGV("%s: id: %d, cmd_buf: %s, msg_buf: %s", __func__, id, cmd_buf, msg_buf);
+    return 0;
+}
