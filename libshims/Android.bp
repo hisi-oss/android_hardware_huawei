@@ -1,4 +1,14 @@
 cc_library_shared {
+    name: "libshim_audioparams",
+    srcs: ["libshim_audioparams.cpp"],
+    shared_libs: [
+        "libbase",
+        "libcutils",
+    ],
+    vendor: true,
+}
+
+cc_library_shared {
     name: "libshim_utils",
     srcs: ["libshim_utils.cpp"],
     shared_libs: ["libutils"],
