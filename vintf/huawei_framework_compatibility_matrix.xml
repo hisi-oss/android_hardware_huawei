@@ -1,0 +1,568 @@
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<compatibility-matrix version="1.0" type="framework" level="5">
+    <hal format="hidl" optional="true">
+        <name>android.hardware.audio</name>
+        <version>5.0</version>
+        <interface>
+            <name>IDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.audio.effect</name>
+        <version>5.0</version>
+        <interface>
+            <name>IEffectsFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.light</name>
+        <version>2.0</version>
+        <interface>
+            <name>ILight</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.vibrator</name>
+        <version>1.0</version>
+        <interface>
+            <name>IVibrator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.activity_recognition</name>
+        <version>1.1</version>
+        <interface>
+            <name>IActivityRecognition</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.ai</name>
+        <version>1.3</version>
+        <interface>
+            <name>IAiEngineService</name>
+            <instance>hiaiserver</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.ai</name>
+        <version>2.1</version>
+        <interface>
+            <name>IAIService_hidl</name>
+            <instance>hiaiserver_v2</instance>
+        </interface>
+        <interface>
+            <name>IModelManagerService_hidl</name>
+            <instance>hiaiserver_modelmanager</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.audioremote</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAudioRemoteConnect</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.biometrics.fingerprint</name>
+        <version>2.2</version>
+        <interface>
+            <name>IExtBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.biometrics.hwfacerecognize</name>
+        <version>2.0</version>
+        <interface>
+            <name>IBiometricsFaceRecognize</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.biometrics.hwvoiceid</name>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsVoiceId</name>
+            <instance>hwvoiceid</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.bluetooth</name>
+        <version>1.1</version>
+        <interface>
+            <name>IHwBluetoothHciExt</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.camera.camResource</name>
+        <version>1.3</version>
+        <interface>
+            <name>IHwCameraResourceService</name>
+            <instance>huawei.cameraresource.service</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.camera.cfgsvr</name>
+        <version>1.1</version>
+        <interface>
+            <name>IHwCamCfgSvr</name>
+            <instance>huawei.camera.cfgsvr</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.camera.factory</name>
+        <version>1.0</version>
+        <interface>
+            <name>ICameraFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.camera.vircamera</name>
+        <version>1.0</version>
+        <interface>
+            <name>IVirCameraChannel</name>
+            <instance>virtualcamera.register</instance>
+            <instance>virtualcamera.streamchange</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.dubai</name>
+        <version>1.1</version>
+        <interface>
+            <name>IDubaiManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.eid</name>
+        <version>1.1</version>
+        <interface>
+            <name>IEid</name>
+            <instance>eid</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.fm</name>
+        <version>1.0</version>
+        <interface>
+            <name>IFmControl</name>
+            <instance>fm</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.gnss</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHWGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.graphics.mediacomm</name>
+        <version>2.1</version>
+        <interface>
+            <name>IMediaComm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hinetmanager</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHinetmanagerDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hisiradio</name>
+        <version>1.3</version>
+        <interface>
+            <name>IHisiRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hisupl</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISuplclienttoserverInterface</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hivrar</name>
+        <version>2.1</version>
+        <interface>
+            <name>IHiVRAR</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.huaweiantitheft</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHuaweiAntiTheft</name>
+            <instance>huaweiantitheft</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.huaweisigntool</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISignTool</name>
+            <instance>huaweisigntool</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwdisplay</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplay</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwdisplay.displayengine</name>
+        <version>1.2</version>
+        <interface>
+            <name>IDisplayEngineWrapper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwfactoryinterface</name>
+        <version>1.1</version>
+        <interface>
+            <name>IHwFactoryInterface</name>
+            <instance>hwfactoryinterface_hal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwfs</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHwfs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwhiview</name>
+        <version>1.1</version>
+        <interface>
+            <name>IHwHiviewInterface</name>
+            <instance>hwhiview_hal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwsched</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISched</name>
+            <instance>hwsched</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwstp</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHwStp</name>
+            <instance>hwstp</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwupdate</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHwUpdate</name>
+            <instance>hwupdate_hal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.hwvibrator</name>
+        <version>1.1</version>
+        <interface>
+            <name>IHWVibrator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.iawareperf</name>
+        <version>1.0</version>
+        <interface>
+            <name>IUniPerf</name>
+            <instance>uniperf</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.iawareperfpolicy</name>
+        <version>1.0</version>
+        <interface>
+            <name>IPerfPolicy</name>
+            <instance>perfpolicy</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.iked</name>
+        <version>1.0</version>
+        <interface>
+            <name>IIkedDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.jpegdec</name>
+        <version>1.0</version>
+        <interface>
+            <name>IJpegDecode</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.kds</name>
+        <version>1.1</version>
+        <interface>
+            <name>IKds</name>
+            <instance>kds</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.libteec</name>
+        <version>3.0</version>
+        <interface>
+            <name>ILibteecGlobal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.light</name>
+        <version>2.0</version>
+        <interface>
+            <name>ILight</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.modemchr</name>
+        <version>1.0</version>
+        <interface>
+            <name>IModemchrDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.modemlogcat</name>
+        <version>1.0</version>
+        <interface>
+            <name>IModemlogcat</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.motion</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMotion</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.nfc</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHWNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.perfgenius</name>
+        <version>2.0</version>
+        <interface>
+            <name>IPerfGenius</name>
+            <instance>perfgenius</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.radio</name>
+        <version>2.0</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.radio.chr</name>
+        <version>1.0</version>
+        <interface>
+            <name>IRadioChr</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.radio.deprecated</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOemHook</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.radio.ims</name>
+        <version>2.0</version>
+        <interface>
+            <name>IRadioIms</name>
+            <instance>rildi</instance>
+            <instance>rildi2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.tp</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITouchscreen</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.vdecoder</name>
+        <version>1.0</version>
+        <interface>
+            <name>IVDecoder</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.wifi</name>
+        <version>1.2</version>
+        <interface>
+            <name>IHwWifiExt</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.wifi.stereo</name>
+        <version>1.0</version>
+        <interface>
+            <name>IStereo</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.wifi.supplicant</name>
+        <version>3.0</version>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.huawei.hardware.wifi.waudio</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWaudio</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.bluetooth.audio</name>
+        <version>4</version>
+        <interface>
+            <name>IBluetoothAudioProviderFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.cas</name>
+        <version>1</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.drm</name>
+        <version>1</version>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>clearkey</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.health</name>
+        <version>1</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.ir</name>
+        <version>1</version>
+        <interface>
+            <name>IConsumerIr</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.light</name>
+        <version>2</version>
+        <interface>
+            <name>ILights</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.power</name>
+        <version>5</version>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.usb</name>
+        <version>1.3</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi</name>
+        <version>2</version>
+        <interface>
+            <name>IWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi.hostapd</name>
+        <version>2</version>
+        <interface>
+            <name>IHostapd</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi.supplicant</name>
+        <version>3</version>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
