@@ -1,2 +1,19 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 soong_namespace {
+}
+
+mkdir {
+    name: "vendor_modem_modem_fw_mountpoint",
+    dir: "modem/modem_fw",
+    vendor: true,
+}
+
+mkdir {
+    name: "odm_etc_ncfg_mountpoint",
+    dir: "etc/ncfg",
+    device_specific: true,
 }
