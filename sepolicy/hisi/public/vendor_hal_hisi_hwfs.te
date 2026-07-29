@@ -1,0 +1,5 @@
+# HwBinder IPC from client to server, and callbacks
+binder_call(vendor_hal_hisi_hwfs_client, vendor_hal_hisi_hwfs_server)
+binder_call(vendor_hal_hisi_hwfs_server, vendor_hal_hisi_hwfs_client)
+
+hal_attribute_hwservice(vendor_hal_hisi_hwfs, vendor_hal_hisi_hwfs_hwservice)

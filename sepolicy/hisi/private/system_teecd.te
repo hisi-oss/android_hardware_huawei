@@ -1,0 +1,5 @@
+type system_teecd, domain, coredomain, mlstrustedsubject;
+type system_teecd_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain(system_teecd)
+

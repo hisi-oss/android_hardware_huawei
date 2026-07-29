@@ -1,0 +1,5 @@
+# HwBinder IPC from client to server, and callbacks
+binder_call(vendor_hal_hisi_libteec_client, vendor_hal_hisi_libteec_server)
+binder_call(vendor_hal_hisi_libteec_server, vendor_hal_hisi_libteec_client)
+
+hal_attribute_hwservice(vendor_hal_hisi_libteec, vendor_hal_hisi_libteec_hwservice)

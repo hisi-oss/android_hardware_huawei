@@ -1,0 +1,4 @@
+type vendor_hisi_touchscreen, domain;
+type vendor_hisi_touchscreen_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_hisi_touchscreen)

@@ -1,0 +1,10 @@
+vendor_hal_attribute(hisi_antitheft);
+vendor_hal_attribute(hisi_display);
+vendor_hal_attribute(hisi_hwfactoryinterface);
+vendor_hal_attribute(hisi_hwfs);
+vendor_hal_attribute(hisi_libteec);
+vendor_hal_attribute(hisi_media);
+vendor_hal_attribute(hisi_misc);
+vendor_hal_attribute(hisi_otherdevices);
+vendor_hal_attribute(hisi_perf);
+vendor_hal_attribute(hisi_touchscreen);

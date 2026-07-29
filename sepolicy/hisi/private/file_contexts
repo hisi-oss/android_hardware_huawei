@@ -1,0 +1,5 @@
+# IMS
+/system/bin/emcomd                              u:object_r:emcomd_exec:s0
+
+# Teecd
+/system/bin/tee_auth_daemon                     u:object_r:system_teecd_exec:s0

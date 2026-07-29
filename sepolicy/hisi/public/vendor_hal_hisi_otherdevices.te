@@ -1,0 +1,5 @@
+# HwBinder IPC from client to server, and callbacks
+binder_call(vendor_hal_hisi_otherdevices_client, vendor_hal_hisi_otherdevices_server)
+binder_call(vendor_hal_hisi_otherdevices_server, vendor_hal_hisi_otherdevices_client)
+
+hal_attribute_hwservice(vendor_hal_hisi_otherdevices, vendor_hal_hisi_otherdevices_hwservice)

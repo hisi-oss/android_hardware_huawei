@@ -1,0 +1,3 @@
+# HwBinder IPC from client to server, and callbacks
+binder_call(vendor_hal_hisi_media_client, vendor_hal_hisi_media_server)
+binder_call(vendor_hal_hisi_media_server, vendor_hal_hisi_media_client)

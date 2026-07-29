@@ -1,0 +1,126 @@
+# Anti theft
+/vendor/bin/hw/vendor\.huawei\.hardware\.huaweiantitheft@1\.0-service u:object_r:vendor_hal_hisi_antitheft_default_exec:s0
+
+# Biometrics
+/vendor/bin/hw/vendor\.huawei\.hardware\.biometrics\.fingerprint@2\.[0-9]-service u:object_r:hal_fingerprint_default_exec:s0
+
+# Camera
+/vendor/bin/CameraDaemon u:object_r:hal_camera_default_exec:s0
+
+# Connectivity
+/vendor/bin/start_connectivity_hisi             u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/octty                               u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/oam_hisi                            u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/fusion_daemon                       u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/gpsdaemon                           u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/glgps47531                          u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/glgps4774                           u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/gnss_engine_hisi                    u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/gnss_control_hisi                   u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/gnss_supl20clientd_hisi             u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/bin/gnss_watchlssd_thirdparty           u:object_r:vendor_hisi_connectivity_exec:s0
+/vendor/xbin/gnss_watchlssd_thirdparty          u:object_r:vendor_hisi_connectivity_exec:s0
+
+# Display
+/vendor/bin/hw/vendor\.huawei\.hardware\.graphics\.displayeffect@1\.0-service u:object_r:vendor_hal_hisi_display_default_exec:s0
+/vendor/bin/hw/vendor\.huawei\.hardware\.hwdisplay\.displayengine@1\.[0-9]-service u:object_r:vendor_hal_hisi_display_default_exec:s0
+/vendor/bin/hw/vendor\.huawei\.hardware\.hwdisplay@1\.0-service u:object_r:vendor_hal_hisi_display_default_exec:s0
+
+# DRM
+/vendor/bin/hw/android\.hardware\.drm@1\.[0-9]-service.widevine u:object_r:vendor_hal_drm_widevine_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.[0-9]-service.clearkey u:object_r:vendor_hal_drm_clearkey_exec:s0
+/vendor/bin/hw/android\.hardware\.drm-service\.clearkey         u:object_r:vendor_hal_drm_clearkey_exec:s0
+
+# Gatekeeper
+/vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software u:object_r:hal_gatekeeper_default_exec:s0
+
+# GNSS
+/vendor/bin/hw/vendor\.huawei\.hardware\.gnss@1\.[0-9]-service u:object_r:hal_gnss_default_exec:s0
+/vendor/bin/hw/vendor\.huawei\.hardware\.hisupl@1\.0-service u:object_r:hal_gnss_default_exec:s0
+
+# Hisi init
+/vendor/bin/hisi_init                           u:object_r:vendor_hisi_init_exec:s0
+
+# Health
+/vendor/bin/hw/android\.hardware\.health-service\.hisi u:object_r:hal_health_default_exec:s0
+
+# HW factory interface
+/vendor/bin/hw/vendor\.huawei\.hardware\.hwfactoryinterface@1\.1-service u:object_r:vendor_hal_hisi_hwfactoryinterface_default_exec:s0
+
+# HWFS
+/vendor/bin/hw/vendor\.huawei\.hardware\.hwfs@1\.0-service u:object_r:vendor_hal_hisi_hwfs_default_exec:s0
+
+# Ir
+/vendor/bin/hw/android\.hardware\.ir-service\.huawei u:object_r:hal_ir_default_exec:s0
+
+# Light
+/vendor/bin/hw/android\.hardware\.light-service\.huawei u:object_r:hal_light_default_exec:s0
+
+# Media
+/vendor/bin/hw/vendor\.huawei\.hardware\.jpegdec@1\.0-service u:object_r:vendor_hal_hisi_media_default_exec:s0
+/vendor/bin/hw/vendor\.huawei\.hardware\.graphics\.mediacomm@2\.0-service u:object_r:vendor_hal_hisi_media_default_exec:s0
+
+# Otherdevices
+/vendor/bin/hw/vendor\.huawei\.hardware\.otherdevices@1\.0-service u:object_r:vendor_hal_hisi_otherdevices_default_exec:s0
+
+# Oeminfo
+/vendor/bin/hisecd u:object_r:vendor_hisi_oeminfo_nvm_server_exec:s0
+/vendor/bin/oeminfo_nvm_server u:object_r:vendor_hisi_oeminfo_nvm_server_exec:s0
+
+# Perf
+/vendor/bin/hw/vendor\.huawei\.hardware\.perfgenius@[0-9]\.0-service u:object_r:vendor_hal_hisi_perf_default_exec:s0
+/vendor/bin/hw/vendor\.huawei\.hardware\.iawareperf@1\.0-service u:object_r:vendor_hal_hisi_perf_default_exec:s0
+
+# Power
+/vendor/bin/hw/vendor\.huawei\.hardware\.power@1\.0-service u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power-service\.huawei-libperfmgr u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr u:object_r:hal_power_default_exec:s0
+
+# Secure element
+/vendor/bin/hw/android\.hardware\.secure_element@1\.0-service\.hisi u:object_r:hal_secure_element_default_exec:s0
+
+# Sensors
+/vendor/bin/hw/vendor\.huawei\.hardware\.sensors@1\.[0-9]-service u:object_r:hal_sensors_default_exec:s0
+/vendor/bin/activity_recognition_service        u:object_r:vendor_hisi_sensors_exec:s0
+
+# Storage
+/vendor/bin/storage_info                        u:object_r:vendor_hisi_storage_exec:s0
+/vendor/bin/hwemerffu                           u:object_r:vendor_hisi_storage_exec:s0
+
+# Mount points
+/3rdmodem(/.*)?                                 u:object_r:modem_file:s0
+/3rdmodemnvm(/.*)?                              u:object_r:modem_file:s0
+/3rdmodemnvmbkp(/.*)?                           u:object_r:modem_file:s0
+/modem_fw(/.*)?                                 u:object_r:modem_file:s0
+/modem_log(/.*)?                                u:object_r:modem_file:s0
+/modem_om(/.*)?                                 u:object_r:modem_file:s0
+/modemnvm_img(/.*)?                             u:object_r:modem_file:s0
+/mnvm2:0(/.*)?                                  u:object_r:modem_file:s0
+/mnt/modem/mnvm2:0(/.*)?                        u:object_r:modem_file:s0
+/mnt/modem/modem_secure(/.*)?                   u:object_r:modem_file:s0
+/mnt/hisee_fs(/.*)?                             u:object_r:hisee_file:s0
+/splash2(/.*)?                                  u:object_r:splashtwo_file:s0
+/vendor/modem/modem_fw(/.*)?                    u:object_r:modem_vendor_file:s0
+
+# TEE
+/sec_storage(/.*)?                              u:object_r:teecd_data_file:s0
+/data/sec_storage_data(/.*)?                    u:object_r:teecd_data_file:s0
+/data/sec_storage_data_users(/.*)?              u:object_r:teecd_data_file:s0
+/data/vendor/sec_storage_data(/.*)?             u:object_r:vendor_teecd_data_file:s0
+/data/vendor/sec_storage_data_users(/.*)?       u:object_r:vendor_teecd_data_file:s0
+/dev/tc_ns_client                               u:object_r:teecd_device:s0
+/vendor/bin/hw/vendor\.huawei\.hardware\.libteec@[0-9]\.0-service u:object_r:vendor_hal_hisi_libteec_default_exec:s0
+/vendor/bin/system_teecd                        u:object_r:vendor_hisi_teecd_exec:s0
+/vendor/bin/teecd                               u:object_r:vendor_hisi_teecd_exec:s0
+
+# Touchscreen
+/vendor/bin/hw/vendor\.huawei\.hardware\.tp@1\.0-service u:object_r:vendor_hal_hisi_touchscreen_default_exec:s0
+/vendor/bin/aptouch_daemon                      u:object_r:vendor_hisi_touchscreen_exec:s0
+
+# Hisi hals (misc)
+/vendor/bin/hw/vendor\.huawei\.hardware\.hivrar@1\.0-service u:object_r:vendor_hal_hisi_misc_default_exec:s0
+/vendor/bin/hw/vendor\.huawei\.hardware\.huaweisigntool@1\.0-service u:object_r:vendor_hal_hisi_misc_default_exec:s0
+
+# Hisi binaries (misc)
+/vendor/bin/blkcginit                           u:object_r:vendor_blkcginit_exec:s0
+/vendor/bin/water_check                         u:object_r:vendor_hisi_misc_exec:s0

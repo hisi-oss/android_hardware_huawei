@@ -1,0 +1,5 @@
+# HwBinder IPC from client to server, and callbacks
+binder_call(vendor_hal_hisi_perf_client, vendor_hal_hisi_perf_server)
+binder_call(vendor_hal_hisi_perf_server, vendor_hal_hisi_perf_client)
+
+hal_attribute_hwservice(vendor_hal_hisi_perf, vendor_hal_hisi_perf_hwservice)
