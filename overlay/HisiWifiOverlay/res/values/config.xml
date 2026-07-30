@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
+         Note: This config is replacing the config_wifi_dual_band_support
+         since more bands may now be supported (such as 6GHz), the naming dual_band
+         is no longer indicative, and a separate config now exists for each band -->
+    <bool name="config_wifi5ghzSupport">true</bool>
+
+    <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
+         This mechanism allows the host to remain in suspend state and the dongle to actively
+         scan and wake the host when a configured SSID is detected by the dongle. This chipset
+         capability can provide power savings when wifi needs to be always kept on. -->
+    <bool name="config_wifi_background_scan_support">true</bool>
+
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <!-- Indicates that AP mode MAC randomization is supported on this device -->
+    <bool name="config_wifi_ap_mac_randomization_supported">false</bool>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade -->
+    <bool name="config_wifiSaeUpgradeEnabled">false</bool>
+
+    <!-- Indicates whether or not the WLAN driver supports the NL80211_CMD_REG_CHANGE or
+         NL80211_CMD_WIPHY_REG_CHANGE events which indicate the current country code which is
+         being used by the WLAN driver. If the driver doesn't support these events
+         (configuration is `false`) then the driver must handle the setCountryCode request from
+         HAL as a blocking call. In such a case the country code will be applied
+         immediately after the country code is sent to the driver (if the method returns a
+         success). -->
+    <bool name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+</resources>
